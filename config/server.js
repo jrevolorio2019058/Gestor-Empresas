@@ -10,15 +10,19 @@ import morgan from 'morgan';
 
 import { dbConnection } from './mogo.js';
 
+import userRoutes from "../src/users/user.routes.js";
+
 class Server{
 
     constructor() {
         
         this.app = express();
         this.port = process.env.PORT;
+        this.usuarioPath = '/gestorEmpresaApi/v1/inicio'
 
         this.middlewares();
         this.conectarDB();
+        this.routes();
 
     }
 
@@ -33,6 +37,12 @@ class Server{
         this.app.use(express.json());
         this.app.use(helmet());
         this.app.use(morgan('dev'));
+
+    }
+
+    routes() {
+        
+        this.app.use(this.usuarioPath, userRoutes);
 
     }
 

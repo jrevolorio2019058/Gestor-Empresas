@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "65e2143895c68995a73aa807"
+  },
+  "userName": "Braulio Echeverria",
+  "email": "braulioecheverria@kinal.edu.gt",
+  "password": "123456",
+  "role": "ADMIN_ROLE",
+  "state": true
+}]
