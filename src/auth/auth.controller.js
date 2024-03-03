@@ -19,6 +19,13 @@ export const login = async (req, res) => {
         });
     }
 
+    if (usuario.role != 'ADMIN_ROLE') {
+        return res.status(401).json({
+        msg: "ROLE INVALIDO, no se puede logear si no es ADMIN"
+
+        });
+    }
+
     const validPassword = bcryptjs.compareSync(password, usuario.password);
 
     if (!validPassword) {

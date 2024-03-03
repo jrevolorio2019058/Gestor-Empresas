@@ -14,18 +14,6 @@ export const existenteEmail = async (email = '') =>{
 
 }
 
-export const roleAdmin = async (role = '') =>{
-    
-    const existeAdmin = await User.findOne({ role : "ADMIN_ROLE"});
-
-    if (!existeAdmin) {
-        
-        throw new Error(`No tienes ADMIN_ROLE`);
-
-    }
-
-}
-
 export const esRolValido = async (role='') => {
 
     const existeRol = await Role.findOne({role});
