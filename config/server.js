@@ -20,7 +20,7 @@ class Server{
         
         this.app = express();
         this.port = process.env.PORT;
-        this.usuarioPath = '/gestorEmpresaApi/v1/inicio'
+        this.usuarioPath = '/gestorEmpresaApi/v1/user'
         this.authPath = '/gestorEmpresaApi/v1/auth'
 
         this.middlewares();
