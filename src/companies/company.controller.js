@@ -14,3 +14,21 @@ export const companyPost = async (req, res) => {
     })
 
 }
+
+export const companyPut = async (req, res) => {
+
+    const { id } = req.params;
+
+    const {_id, state, ...resto} = req.body;
+
+    await Company.findByIdAndUpdate(id,resto);
+
+    const company = await Company.findOne({_id: id});
+
+    await company.save();
+
+    res.status(200).json({
+        msg: `${req.usuario.userName} haz modificado correctamente los datos de ${company.companyName}`
+    });
+
+}

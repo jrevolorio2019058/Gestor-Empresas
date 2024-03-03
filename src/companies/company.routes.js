@@ -4,7 +4,8 @@ import { check } from "express-validator";
 
 import {
 
-    companyPost
+    companyPost,
+    companyPut
 
 } from "./company.controller.js";
 
@@ -29,6 +30,17 @@ router.post(
         check("nationality", "Es obligatorio la nacionalidad").not().isEmpty(),
         validarCampos
     ], companyPost
+
+);
+
+router.put(
+
+    "/:id",
+    [
+        validarJWT,
+        tieneRole("ADMIN_ROLE"),
+        validarCampos
+    ], companyPut
 
 );
 
