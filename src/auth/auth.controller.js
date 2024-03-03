@@ -33,13 +33,20 @@ export const login = async (req, res) => {
 
     if (!existeRole) {
 
-        const role = new Role({
+        const roleAdmin = new Role({
 
-            role: "ADMIN_ROLE"
+            role: "ADMIN_ROLE",
 
         });
 
-        await role.save();
+        const roleCliente = new Role({
+
+            role: "CLIENT_ROLE",
+
+        });
+
+        await roleAdmin.save();
+        await roleCliente.save();
     }
 
     res.status(200).json({

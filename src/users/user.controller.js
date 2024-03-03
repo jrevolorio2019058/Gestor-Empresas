@@ -6,9 +6,7 @@ export const clientePost = async (req, res) => {
 
     const usuarioAutenticado = req.usuario;
 
-    const {userName, email, password} = req.body;
-
-    const role = "ADMIN_ROLE";
+    const {userName, email, password, role} = req.body;
 
     const usuario = new Usuario({userName, email, password, role, state: true});
 
