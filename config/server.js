@@ -14,6 +14,8 @@ import userRoutes from "../src/users/user.routes.js";
 
 import authRoutes from "../src/auth/auth.routes.js";
 
+import companyRoutes from "../src/companies/company.routes.js";
+
 class Server{
 
     constructor() {
@@ -22,6 +24,7 @@ class Server{
         this.port = process.env.PORT;
         this.usuarioPath = '/gestorEmpresaApi/v1/user'
         this.authPath = '/gestorEmpresaApi/v1/auth'
+        this.companyPath = '/gestorEmpresaApi/v1/company'
 
         this.middlewares();
         this.conectarDB();
@@ -47,6 +50,7 @@ class Server{
         
         this.app.use(this.usuarioPath, userRoutes);
         this.app.use(this.authPath, authRoutes);
+        this.app.use(this.companyPath, companyRoutes);
 
     }
 
