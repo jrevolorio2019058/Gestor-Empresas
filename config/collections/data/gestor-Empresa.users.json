@@ -4,7 +4,7 @@
   },
   "userName": "Braulio Echeverria",
   "email": "braulioecheverria@kinal.edu.gt",
-  "password": "123456",
+  "password": "$2y$10$op3cRCiDDGr/YdpMruPxHu7RjAFqk1JLdus77rrnSBbL4hSyY9s5e",
   "role": "ADMIN_ROLE",
   "state": true
 }]
