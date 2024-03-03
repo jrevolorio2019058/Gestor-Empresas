@@ -2,7 +2,7 @@ import { Router } from "express";
 
 
 import {
-    iniciarBaseDeDatos
+    
 } from "./user.controller.js";
 
 import { } from "../helpers/db-validator.js";
@@ -16,7 +16,7 @@ router.post(
     "/",
     [
         validarCampos
-    ], iniciarBaseDeDatos
+    ],
 );
 
 export default router;
