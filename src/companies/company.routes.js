@@ -5,7 +5,8 @@ import { check } from "express-validator";
 import {
 
     companyPost,
-    companyPut
+    companyPut,
+    companyDelete
 
 } from "./company.controller.js";
 
@@ -41,6 +42,17 @@ router.put(
         tieneRole("ADMIN_ROLE"),
         validarCampos
     ], companyPut
+
+);
+
+router.delete(
+
+    "/:id",
+    [
+        validarJWT,
+        tieneRole("ADMIN_ROLE"),
+        validarCampos
+    ], companyDelete
 
 );
 

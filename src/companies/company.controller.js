@@ -32,3 +32,11 @@ export const companyPut = async (req, res) => {
     });
 
 }
+
+export const companyDelete = async (req, res) => {
+
+    res.status(401).json({
+        msg: `Error! ${req.usuario.userName} no puedes eliminar una empresa.`
+    })
+
+}
