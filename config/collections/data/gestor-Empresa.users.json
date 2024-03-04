@@ -7,4 +7,26 @@
   "password": "$2y$10$op3cRCiDDGr/YdpMruPxHu7RjAFqk1JLdus77rrnSBbL4hSyY9s5e",
   "role": "ADMIN_ROLE",
   "state": true
+},
+{
+  "_id": {
+    "$oid": "65e4373a1c58fc4a80d024e3"
+  },
+  "userName": "josue noj",
+  "email": "josuenoj@kinal.edu.gt",
+  "password": "$2a$10$MpuX9clqmDLAYgMb7CgVr.6rObKgHraahmyButI8YSOEZMcdF0mbK",
+  "state": true,
+  "role": "CLIENT_ROLE",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e5428748b59c73f37ac2bd"
+  },
+  "userName": "Jorge Revolorio",
+  "email": "jrevolorio@kinal.edu.gt",
+  "password": "$2a$10$IWqszUVb52.bDxINoqwH9.rEwQchuyUzkgexu/QhgoVk04tfMArIW",
+  "state": true,
+  "role": "ADMIN_ROLE",
+  "__v": 0
 }]

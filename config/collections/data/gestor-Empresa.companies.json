@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "65e506c1bdc7d9a1153ba9d7"
+  },
+  "companyName": "Rondald MC Donalds C.A",
+  "impactLevel": "High Impact",
+  "yearsOfExperience": 42,
+  "businessCategory": "Alimentación",
+  "nationality": "Estado Unidense",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e541a341f15e4d38394114"
+  },
+  "companyName": "Toyota",
+  "impactLevel": "High Impact",
+  "yearsOfExperience": 74,
+  "businessCategory": "Vehiculos",
+  "nationality": "Estado Unidense",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e541c041f15e4d38394118"
+  },
+  "companyName": "Ecofiltro",
+  "impactLevel": "Medium Impact",
+  "yearsOfExperience": 15,
+  "businessCategory": "Soluciones Sociales",
+  "nationality": "Guatemalteca",
+  "state": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e542d548b59c73f37ac2c1"
+  },
+  "companyName": "Banco Banrural C.A",
+  "impactLevel": "Medium Impact",
+  "yearsOfExperience": 15,
+  "businessCategory": "Finaciamiento",
+  "nationality": "Guatemalteca",
+  "state": true,
+  "__v": 0
+}]
