@@ -43,6 +43,80 @@ export const companyDelete = async (req, res) => {
 
 }
 
+export const companyGet = async (req, res = response) => {
+
+    const {activeYears, ascendancy, descendant} = req.body;
+
+    if(activeYears == null){
+
+        if(ascendancy == true){
+
+            const { limite, desde } = req.query;
+
+            const query = { state: true };
+
+            const [total, company] = await Promise.all([
+
+                Company.countDocuments(query),
+                Company.find(query)
+                    .sort({ businessCategory: 1 })
+                    .skip(Number(desde))
+                    .limit(Number(limite))
+
+            ]);
+
+            res.status(200).json({
+                total,
+                company
+            })
+
+        }else if(descendant == true){
+
+            const { limite, desde } = req.query;
+
+            const query = { state: true };
+
+            const [total, company] = await Promise.all([
+
+                Company.countDocuments(query),
+                Company.find(query)
+                    .sort({ businessCategory: -1 })
+                    .skip(Number(desde))
+                    .limit(Number(limite))
+
+            ]);
+
+            res.status(200).json({
+                total,
+                company
+            })
+
+        }
+
+    }else{
+
+        const { limite, desde } = req.query;
+
+        const query = { state: true, yearsOfExperience: activeYears};
+
+        const [total, company] = await Promise.all([
+
+            Company.countDocuments(query),
+            Company.find(query)
+                .skip(Number(desde))
+                .limit(Number(limite))
+
+        ]);
+
+        res.status(200).json({
+            total,
+            company
+        })
+
+    }
+
+}
+
 export const companyReport = async (req, res) => {
     try {
         const companies = await Company.find();

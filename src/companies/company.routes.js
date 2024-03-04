@@ -7,7 +7,8 @@ import {
     companyPost,
     companyPut,
     companyDelete,
-    companyReport
+    companyReport,
+    companyGet
 
 } from "./company.controller.js";
 
@@ -15,7 +16,7 @@ import {tieneRole} from "../middlewares/validar-role.js";
 
 import {validarJWT} from "../middlewares/validar-jwt.js";
 
-import { validarCampos } from "../middlewares/validar-campos.js";
+import { validarCampos, validacionFiltros} from "../middlewares/validar-campos.js";
 
 const router = Router();
 
@@ -33,6 +34,16 @@ router.post(
         validarCampos
     ], companyPost
 
+);
+
+router.get(
+    "/",
+    [
+        validarJWT,
+        validacionFiltros,
+        tieneRole("ADMIN_ROLE"),
+        validarCampos
+    ], companyGet
 );
 
 router.get(
