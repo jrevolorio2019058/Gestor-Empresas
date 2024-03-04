@@ -1,0 +1,198 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "gestor-Empresa",
+    "dateExported": "2024-03-04T03:46:12.546Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "6c53f39f-4d62-4b24-a37f-297e43d156ae",
+            "name": "Home",
+            "containerId": "",
+            "created": "2024-03-04T03:38:45.073Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "cff053c4-2e9c-4e6f-809f-afe66e5b484b",
+            "name": "Client",
+            "containerId": "",
+            "created": "2024-03-04T03:38:45.074Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "61737696-4c47-4dba-9a67-49c94c3e0cd3",
+            "name": "Company",
+            "containerId": "",
+            "created": "2024-03-04T03:38:45.075Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "972eea2c-25d4-4c33-bed0-e7703aadf338",
+            "name": "Report",
+            "containerId": "",
+            "created": "2024-03-04T03:38:45.076Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "1fa12cbe-e80d-49e8-acbe-7b2f7b82ee84",
+            "name": "ViewCompanies",
+            "containerId": "",
+            "created": "2024-03-04T03:38:45.077Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "14273ea2-bf5f-4048-a02b-c301b989850c",
+            "colId": "5b204c40-f66a-4901-a8fd-eb521d2e086a",
+            "containerId": "6c53f39f-4d62-4b24-a37f-297e43d156ae",
+            "name": "login",
+            "url": "http://localhost:3000/gestorEmpresaApi/v1/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-04T03:38:45.073Z",
+            "modified": "2024-03-04T03:38:50.923Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"email\": \"braulioecheverria@kinal.edu.gt\",\n    \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "785ef2ef-adc5-43d8-ac18-e0933f173b10",
+            "colId": "5b204c40-f66a-4901-a8fd-eb521d2e086a",
+            "containerId": "cff053c4-2e9c-4e6f-809f-afe66e5b484b",
+            "name": "addClient",
+            "url": "http://localhost:3000/gestorEmpresaApi/v1/user",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-04T03:38:45.074Z",
+            "modified": "2024-03-04T03:39:51.840Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyMTQzODk1YzY4OTk1YTczYWE4MDciLCJpYXQiOjE3MDk1MjM1MzAsImV4cCI6MTcwOTUzNDMzMH0.SmT85RyFq0Y-ruhcPkFeHFPiWvdx2qdPIIIjQt--Dz0"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"userName\": \"Jorge Revolorio\",\n    \"email\": \"jrevolorio@kinal.edu.gt\",\n    \"password\": \"123456\",\n    \"role\": \"ADMIN_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2515adbb-f25f-4e65-9b25-b68ada63e693",
+            "colId": "5b204c40-f66a-4901-a8fd-eb521d2e086a",
+            "containerId": "61737696-4c47-4dba-9a67-49c94c3e0cd3",
+            "name": "addCompany",
+            "url": "http://localhost:3000/gestorEmpresaApi/v1/company",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-04T03:38:45.075Z",
+            "modified": "2024-03-04T03:41:08.960Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyMTQzODk1YzY4OTk1YTczYWE4MDciLCJpYXQiOjE3MDk1MjM1MzAsImV4cCI6MTcwOTUzNDMzMH0.SmT85RyFq0Y-ruhcPkFeHFPiWvdx2qdPIIIjQt--Dz0"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"companyName\": \"Banrural\",\n    \"impactLevel\": \"Medium Impact\",\n    \"yearsOfExperience\": 42,\n    \"businessCategory\": \"Finaciamiento\",\n    \"nationality\": \"Guatemalteca\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "faa01ef7-a4e6-47d8-9ab0-98b6d0d52aed",
+            "colId": "5b204c40-f66a-4901-a8fd-eb521d2e086a",
+            "containerId": "61737696-4c47-4dba-9a67-49c94c3e0cd3",
+            "name": "editCompany",
+            "url": "http://localhost:3000/gestorEmpresaApi/v1/company/65e542d548b59c73f37ac2c1",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-04T03:38:45.076Z",
+            "modified": "2024-03-04T03:45:02.060Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyMTQzODk1YzY4OTk1YTczYWE4MDciLCJpYXQiOjE3MDk1MjM1MzAsImV4cCI6MTcwOTUzNDMzMH0.SmT85RyFq0Y-ruhcPkFeHFPiWvdx2qdPIIIjQt--Dz0"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"companyName\": \"Banco Banrural C.A\",\n    \"yearsOfExperience\": 15\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "94841b62-e630-4421-88b1-8f2440d1ce08",
+            "colId": "5b204c40-f66a-4901-a8fd-eb521d2e086a",
+            "containerId": "61737696-4c47-4dba-9a67-49c94c3e0cd3",
+            "name": "deleteCompany",
+            "url": "http://localhost:3000/gestorEmpresaApi/v1/company/65e506c1bdc7d9a1153ba9d",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-04T03:38:45.077Z",
+            "modified": "2024-03-04T03:41:28.904Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyMTQzODk1YzY4OTk1YTczYWE4MDciLCJpYXQiOjE3MDk1MjM1MzAsImV4cCI6MTcwOTUzNDMzMH0.SmT85RyFq0Y-ruhcPkFeHFPiWvdx2qdPIIIjQt--Dz0"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "577c6512-e285-4b6f-8999-d15d265128cd",
+            "colId": "5b204c40-f66a-4901-a8fd-eb521d2e086a",
+            "containerId": "972eea2c-25d4-4c33-bed0-e7703aadf338",
+            "name": "companyReport",
+            "url": "http://localhost:3000/gestorEmpresaApi/v1/company/report",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-04T03:38:45.078Z",
+            "modified": "2024-03-04T03:41:39.999Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyMTQzODk1YzY4OTk1YTczYWE4MDciLCJpYXQiOjE3MDk1MjM1MzAsImV4cCI6MTcwOTUzNDMzMH0.SmT85RyFq0Y-ruhcPkFeHFPiWvdx2qdPIIIjQt--Dz0"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4ad612aa-b4fc-4e7f-af2f-b80cf17fcbcb",
+            "colId": "5b204c40-f66a-4901-a8fd-eb521d2e086a",
+            "containerId": "1fa12cbe-e80d-49e8-acbe-7b2f7b82ee84",
+            "name": "companies",
+            "url": "http://localhost:3000/gestorEmpresaApi/v1/company",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-03-04T03:38:45.079Z",
+            "modified": "2024-03-04T03:45:23.366Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyMTQzODk1YzY4OTk1YTczYWE4MDciLCJpYXQiOjE3MDk1MjM1MzAsImV4cCI6MTcwOTUzNDMzMH0.SmT85RyFq0Y-ruhcPkFeHFPiWvdx2qdPIIIjQt--Dz0"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"activeYears\": \"15\",\n    \"ascendancy\": true\n    //\"descendant\": true\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

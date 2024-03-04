@@ -91,6 +91,26 @@ export const companyGet = async (req, res = response) => {
                 company
             })
 
+        }else{
+
+            const { limite, desde } = req.query;
+
+            const query = { state: true };
+
+            const [total, company] = await Promise.all([
+
+                Company.countDocuments(query),
+                Company.find(query)
+                    .skip(Number(desde))
+                    .limit(Number(limite))
+
+            ]);
+
+            res.status(200).json({
+                total,
+                company
+            })
+
         }
 
     }else{
