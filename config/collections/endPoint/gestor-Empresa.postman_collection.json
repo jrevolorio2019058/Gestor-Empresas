@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "3e6703c4-bdf3-4dd3-82cf-629944496fff",
+		"name": "gestor-Empresa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32787267"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"braulioecheverria@kinal.edu.gt\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/gestorEmpresaApi/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gestorEmpresaApi",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "addClient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU0MzczYTFjNThmYzRhODBkMDI0ZTMiLCJpYXQiOjE3MDk0OTM4OTIsImV4cCI6MTcwOTUwNDY5Mn0.ff5iupyiLGrziA9Sk2z4YQIKiM0Hya7fV8yDmxbSP24",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Oscar Morales\",\r\n    \"email\": \"omorales@kinal.edu.gt\",\r\n    \"password\": \"123456\",\r\n    \"role\": \"CLIENT_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/gestorEmpresaApi/v1/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gestorEmpresaApi",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "addCompany",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyMTQzODk1YzY4OTk1YTczYWE4MDciLCJpYXQiOjE3MDk1MDgwOTUsImV4cCI6MTcwOTUxODg5NX0.CJ2DEYm_s4x1_krCnX5G1Zxw_7Xxo6kEf56kHPdBCL4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyName\": \"MC Donalds\",\r\n    \"impactLevel\": \"High Impact\",\r\n    \"yearsOfExperience\": 52,\r\n    \"businessCategory\": \"Alimentación\",\r\n    \"nationality\": \"Estado Unidense\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/gestorEmpresaApi/v1/company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gestorEmpresaApi",
+								"v1",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editCompany",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyMTQzODk1YzY4OTk1YTczYWE4MDciLCJpYXQiOjE3MDk1MDgwOTUsImV4cCI6MTcwOTUxODg5NX0.CJ2DEYm_s4x1_krCnX5G1Zxw_7Xxo6kEf56kHPdBCL4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyName\": \"Rondald MC Donalds C.A\",\r\n    \"yearsOfExperience\": 42\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/gestorEmpresaApi/v1/company/65e506c1bdc7d9a1153ba9d7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gestorEmpresaApi",
+								"v1",
+								"company",
+								"65e506c1bdc7d9a1153ba9d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCompany",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyMTQzODk1YzY4OTk1YTczYWE4MDciLCJpYXQiOjE3MDk1MDgwOTUsImV4cCI6MTcwOTUxODg5NX0.CJ2DEYm_s4x1_krCnX5G1Zxw_7Xxo6kEf56kHPdBCL4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/gestorEmpresaApi/v1/company/65e506c1bdc7d9a1153ba9d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gestorEmpresaApi",
+								"v1",
+								"company",
+								"65e506c1bdc7d9a1153ba9d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "companyReport",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyMTQzODk1YzY4OTk1YTczYWE4MDciLCJpYXQiOjE3MDk1MDgwOTUsImV4cCI6MTcwOTUxODg5NX0.CJ2DEYm_s4x1_krCnX5G1Zxw_7Xxo6kEf56kHPdBCL4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/gestorEmpresaApi/v1/company/report",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gestorEmpresaApi",
+								"v1",
+								"company",
+								"report"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

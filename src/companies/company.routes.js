@@ -6,7 +6,8 @@ import {
 
     companyPost,
     companyPut,
-    companyDelete
+    companyDelete,
+    companyReport
 
 } from "./company.controller.js";
 
@@ -32,6 +33,15 @@ router.post(
         validarCampos
     ], companyPost
 
+);
+
+router.get(
+    "/report",
+    [
+        validarJWT,
+        tieneRole("ADMIN_ROLE"),
+        validarCampos
+    ], companyReport
 );
 
 router.put(
